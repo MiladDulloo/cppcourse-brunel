@@ -1,10 +1,12 @@
 #include "Neuron.hpp"
 #include <iostream>
 #include <cmath>
+
 using namespace std;
 
-Neuron::Neuron():
-Iext(0.0),V(0.0),
+Neuron::Neuron():		// Constructor initialization list
+Iext(0.0),
+V(0.0),
 spike_t(0.0),
 spike_num(0.0),
 local_t(0.0),
@@ -14,10 +16,12 @@ thld(20.0),
 Vreset(0.0),
 refrac_t(2.0),
 h(0.1),
-refrac_steps(refrac_t / h)
+refrac_steps(refrac_t / h),
+delay(1.5),
+j(0.1)
 {
-		
-	const1 = exp(-h/Tau);
+	buffer.resize(delay + 1, 0.0);
+	const1 = exp(-h/Tau);		//constant unit to update membrane pot at each time step
 	const2 = R*(1.0-const1);
 }
 
@@ -43,9 +47,10 @@ bool Neuron::Neurupdate(double steps)
 	{
 	if (steps==0) return false;			//Neuron simulation loop
 	bool spike = false;
-	const double t_stop =local_t + steps;	
+	const double t_stop = local_t + steps;	
 	while(local_t < t_stop)
 		{
+			auto inTime = local_t%(delay + 1); // ring buffer arrival time of spike. (slide 15 week4)
 			if (V > thld) // spike firing threshold potential is reached
 				{
 				++spike_num;
@@ -55,8 +60,21 @@ bool Neuron::Neurupdate(double steps)
 			if ((spike_t > 0.0) and (local_t - spike_t) < refrac_steps) //if neuron is refractory (in refrac period)
 				{ V = Vreset; } //depolarization reset to Vreset after refractory period
 			else
-				{ V = const1*V + const2*Iext;} //Membrane equation V(t) = V(t +h)
-		++local_t;
+			{ 
+				V = const1*V + const2*Iext + buffer[inTime]; //Membrane equation V(t) = V(t +h) and reading spikes
+				potentials_vector.push_back(V); //Adds new membrane pot to vector
+				
+			}
+				buffer[inTime = 0.0]; // spike buffer clearing
+			++local_t;
 		}
 	return spike;	
 	}
+	
+// Spiek reception
+void Neuron::spike_reception(long receptionT)
+	{
+		size_t outTime = receptionT % (delay +1);//(slide 15 week4)
+		buffer[outTime]+=j;	//writing spikes
+	}
+
