@@ -5,20 +5,9 @@
 using namespace std;
 
 Neuron::Neuron():		// Constructor initialization list
-Iext(0.0),
-V(0.0),
-spike_t(0.0),
-spike_num(0.0),
-local_t(0.0),
-R(20.0),
-Tau(20.0),
-thld(20.0),
-Vreset(0.0),
-refrac_t(2.0),
-h(0.1),
-refrac_steps(refrac_t / h),
-delay(1.5),
-j(0.1)
+Iext(0.0), V(0.0), spike_t(0.0), spike_num(0.0), local_t(0.0), C_E(1000),
+C_I(250), g(5), R(20.0), Tau(20.0), thld(20.0), Vreset(0.0), refrac_t(2.0),
+h(0.1), refrac_steps(refrac_t / h), delay(1.5), j(0.1)
 {
 	buffer.resize(delay + 1, 0.0);
 	const1 = exp(-h/Tau);		//constant unit to update membrane pot at each time step
@@ -71,7 +60,7 @@ bool Neuron::Neurupdate(double steps)
 	return spike;	
 	}
 	
-// Spiek reception
+// Spike reception
 void Neuron::spike_reception(long receptionT)
 	{
 		size_t outTime = receptionT % (delay +1);//(slide 15 week4)

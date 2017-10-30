@@ -14,8 +14,9 @@ private:
 	double spike_num;	// number of spikes
 	long local_t;		// local time of neuron
 //Integration- firing of spikes - calculation for pot
-	double C_E;		// number of Excitatory connections recieved
-	double C_I;		// number of Inhibitory connections recieved3
+	int C_E;		// number of Excitatory connections recieved (random)
+	int C_I;		// number of Inhibitory connections recieved (random)
+	int g;		
 	double Vext; 	// frequency of external input (background activity)
 	const double R;	// membrane resistance
 	const double Tau;	// membrane time constant (ms)
