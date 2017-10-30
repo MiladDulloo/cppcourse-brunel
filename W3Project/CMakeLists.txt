@@ -1,5 +1,5 @@
-cmake_minimum_required (Version 2.6)
-project (Complex)
+cmake_minimum_required (VERSION 2.6)
+project (Neuron)
 
-set(CMAKE_CXX_FLAGS "-03 -W -Wall -pedantic -std=c++11")
-add_executable (complex complex.cpp test_complex.cpp)
+set(CMAKE_CXX_FLAGS " -W -Wall -pedantic -std=c++11")
+add_executable (Neuron Neuron.cpp NeuronMain.cpp)
