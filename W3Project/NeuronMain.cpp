@@ -6,7 +6,12 @@ using namespace std;
 int main()
 {
 	Neuron n1;
+
+//Simulation Time
+	
 	double t_stop;
+	
+	double t_start = 0;
 	
 //User enters simulation stop time t_stop
 	
@@ -15,7 +20,7 @@ int main()
 	cout << "t_stop = " << t_stop;
 	cout << endl;
 	
-//User enters external current Iext
+//User enters external current Iext 
 
 	cout << " enter external Current input : " << endl;
 	double newIext;
@@ -31,8 +36,17 @@ int main()
 
   ofstream MembranePotentials;
   MembranePotentials.open ("MembranePot.txt");
+  MembranePotentials << "Membrane potentials" << endl;
   
-  MembranePotentials << "Writing this to a file.\n";
+for(t_start; t_start < t_stop ; ++t_start)
+{
+	bool spiked = n1.update(/*time step)*/)
+	
+	MembranePotentials << " V = " << 
+
+}
+  
+  
   MembranePotentials.close();
 	
 	return 0;
