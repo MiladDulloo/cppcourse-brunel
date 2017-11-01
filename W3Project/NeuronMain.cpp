@@ -40,9 +40,8 @@ int main()
   
 for(t_start; t_start < t_stop ; ++t_start)
 {
-	bool spiked = n1.update(/*time step)*/)
+	bool spiked = n1.Neurupdate(1);
 	
-	MembranePotentials << " V = " << 
 
 }
   

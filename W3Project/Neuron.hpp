@@ -32,7 +32,7 @@ private:
 	std::vector<double> potentials_vector;	// vector to store potential values at each steps
 	long delay;								// synaptic delay in ms;
 	std::vector<double> buffer;				// spikes buffer ring
-	double j;								// amplitude of spike
+	
 
 
 public:		
@@ -54,13 +54,13 @@ public:
 
 	void set_Iext(double newExtI);
 
-// Update function	
+// Update function
 
 	bool Neurupdate(double steps);
 	
 // recieves spikes at time t with amplitude J
 
-	void spike_reception(long receptionT);
+	void spike_reception(long receptionT, double j);
 
 };
 
