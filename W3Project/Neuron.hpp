@@ -16,8 +16,7 @@ private:
 	
 //Integration- firing of spikes - calculation for pot
 
-	int C_E;								// number of Excitatory connections recieved (random)
-	int C_I;								// number of Inhibitory connections recieved (random)
+	
 	int g;		
 	double Vext; 							// frequency of external input (background activity)
 	const double R;							// membrane resistance
@@ -31,8 +30,8 @@ private:
 	double const2;							// constant for pot calculation
 	std::vector<double> potentials_vector;	// vector to store potential values at each steps
 	long delay;								// synaptic delay in ms;
+	double j;								// amplitude
 	std::vector<double> buffer;				// spikes buffer ring
-	
 
 
 public:		

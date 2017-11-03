@@ -44,6 +44,7 @@ TEST (TwoNeurons, NoPSSpike) {
 			n2.spike_reception(i + static_cast<unsigned long>(delay), 0.1);
 			EXPECT_EQ(0.0,n1.get_V());
 		} 
+	
 	n2.Neurupdate(1);
 	}
 	
@@ -51,12 +52,14 @@ TEST (TwoNeurons, NoPSSpike) {
 	EXPECT_EQ(0.1, n2.get_V());
 	}
 	
+
+
 TEST (TwoNeurons, WithPSSpike) {
 	Neuron n1, n2;
 	int delay = 15;
 	n1.set_Iext(1.01);
 	n2.set_Iext(1.0);
-	for (auto i=0; i<1869+delay;i++){
+	for (auto i=0; i<923+delay;i++){
 		if(n1.Neurupdate(1))
 		{
 			n2.spike_reception(i+static_cast<unsigned long>(delay), 0.1);
@@ -70,8 +73,13 @@ TEST (TwoNeurons, WithPSSpike) {
 	EXPECT_EQ(0, n2.get_V());
 	EXPECT_EQ(1, n2.get_spike_num());
     }
-    int main(int argc, char **argv) {
+   
+   
+
+
+int main(int argc, char **argv) 
+{
 		::testing::InitGoogleTest(&argc, argv);
 		return RUN_ALL_TESTS();
-		}
+}
 		

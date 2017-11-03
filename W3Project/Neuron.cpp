@@ -11,9 +11,8 @@ using namespace std;
 // Constructor initialization list
 
 Neuron::Neuron():
-Iext(0.0), V(0.0), spike_t(0.0), spike_num(0.0), local_t(0.0), C_E(1000),
-C_I(250), g(5), R(20.0), Tau(20.0), thld(20.0), Vreset(0.0), refrac_t(2.0),
-h(0.1), refrac_steps(refrac_t / h), delay(1.5)
+Iext(0.0), V(0.0), spike_t(0.0), spike_num(0.0), local_t(0.0), g(5), R(20.0), Tau(20.0), thld(20.0), Vreset(0.0), refrac_t(2.0),
+h(0.1), refrac_steps(refrac_t / h), delay(15), j(0.1)
 {
 	buffer.resize(delay + 1, 0.0);
 	const1 = exp(-h/Tau);												//constant unit to update membrane pot at each time step
@@ -53,19 +52,24 @@ bool Neuron::Neurupdate(double steps)
 			double inTime = local_t%(delay + 1); 						// ring buffer arrival time of spike. (slide 15 week4)
 			if (V > thld) 												// spike firing threshold potential is reached
 				{
-				++spike_num;
-				spike_t  = local_t;										//latest spike time stores
-				spike=true;
-				}
-			if ((spike_t > 0.0) and (local_t - spike_t) < refrac_steps) //if neuron is refractory (in refrac period)
-				{ V = Vreset; } 										//depolarization reset to Vreset after refractory period
-			else
-			{ 
-				V = const1*V + const2*Iext + buffer[inTime]; 			//Membrane equation V(t) = V(t +h) and reading spikes
-				potentials_vector.push_back(V); 						//Adds new membrane pot to vector
+					spike=true;
+					++spike_num;
+					spike_t  = local_t;									//latest spike time stores
 				
+				}
+		if ((spike_t > 0.0) and (local_t - spike_t) < refrac_steps) //if neuron is refractory (in refrac period)
+				{ V = 0.0;}												//depolarization reset to Vreset after refractory period
+				  														
+			else
+			{ 						
+				potentials_vector.push_back(V); 						//Adds new membrane pot to vector
+				static random_device rd;
+				static mt19937 gen(rd());
+				static poisson_distribution<> extnoiseinput(2);
+				V = const1*V + const2*Iext + j*buffer[inTime] + j*extnoiseinput(gen); //Membrane equation V(t) = V(t +h) + poisson and reading spikes
 			}
-				buffer[inTime = 0.0]; 									// spike buffer clearing
+				buffer[inTime]= 0.0; 									// spike buffer clearing
+				
 			++local_t;
 		}
 	return spike;	
