@@ -1,0 +1,36 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3837138082/fast"
+make[1]: Entering directory `/home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3837138082.dir/build.make CMakeFiles/cmTryCompileExec3837138082.dir/build
+make[2]: Entering directory `/home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/build/CMakeFiles/CMakeTmp'
+/usr/local/bin/cmake -E cmake_progress_report /home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3837138082.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec3837138082.dir/CheckSymbolExists.c.o   -c /home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec3837138082
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec3837138082.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec3837138082.dir/CheckSymbolExists.c.o  -o cmTryCompileExec3837138082 -rdynamic 
+CMakeFiles/cmTryCompileExec3837138082.dir/CheckSymbolExists.c.o: In function `main':
+CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+make[2]: Leaving directory `/home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/build/CMakeFiles/CMakeTmp'
+make[2]: *** [cmTryCompileExec3837138082] Error 1
+make[1]: *** [cmTryCompileExec3837138082/fast] Error 2
+make[1]: Leaving directory `/home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/build/CMakeFiles/CMakeTmp'
+
+File /home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+

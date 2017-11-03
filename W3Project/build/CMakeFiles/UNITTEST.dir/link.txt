@@ -1,0 +1,1 @@
+/usr/bin/c++    -W -Wall -pedantic -std=c++11   CMakeFiles/UNITTEST.dir/Neuron.cpp.o CMakeFiles/UNITTEST.dir/UNITTEST.cpp.o  -o UNITTEST -rdynamic googletest/libgtest.a googletest/libgtest_main.a googletest/libgtest.a -pthread 

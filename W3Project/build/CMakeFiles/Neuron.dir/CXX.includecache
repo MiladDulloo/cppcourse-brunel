@@ -6,6 +6,28 @@
 
 #IncludeRegexTransform: 
 
+/home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/Network.cpp
+Network.hpp
+/home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/Network.hpp
+Neuron.hpp
+/home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/Neuron.hpp
+iostream
+-
+cmath
+-
+random
+-
+fstream
+-
+
+/home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/Network.hpp
+Neuron.hpp
+/home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/Neuron.hpp
+iostream
+-
+vector
+-
+
 /home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/Neuron.cpp
 Neuron.hpp
 /home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/Neuron.hpp
@@ -31,6 +53,8 @@ vector
 /home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/NeuronMain.cpp
 Neuron.hpp
 /home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/Neuron.hpp
+Network.hpp
+/home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/Network.hpp
 iostream
 -
 fstream

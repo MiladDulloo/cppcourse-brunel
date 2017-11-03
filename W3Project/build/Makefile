@@ -70,6 +70,16 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running tests..."
+	/usr/local/bin/ctest --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
+
 # The main all target
 all: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/build/CMakeFiles /home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/build/CMakeFiles/progress.marks
@@ -114,12 +124,76 @@ Neuron/fast:
 	$(MAKE) -f CMakeFiles/Neuron.dir/build.make CMakeFiles/Neuron.dir/build
 .PHONY : Neuron/fast
 
+#=============================================================================
+# Target rules for targets named UNITTEST
+
+# Build rule for target.
+UNITTEST: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 UNITTEST
+.PHONY : UNITTEST
+
+# fast build rule for target.
+UNITTEST/fast:
+	$(MAKE) -f CMakeFiles/UNITTEST.dir/build.make CMakeFiles/UNITTEST.dir/build
+.PHONY : UNITTEST/fast
+
+#=============================================================================
+# Target rules for targets named gtest
+
+# Build rule for target.
+gtest: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gtest
+.PHONY : gtest
+
+# fast build rule for target.
+gtest/fast:
+	$(MAKE) -f googletest/CMakeFiles/gtest.dir/build.make googletest/CMakeFiles/gtest.dir/build
+.PHONY : gtest/fast
+
+#=============================================================================
+# Target rules for targets named gtest_main
+
+# Build rule for target.
+gtest_main: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gtest_main
+.PHONY : gtest_main
+
+# fast build rule for target.
+gtest_main/fast:
+	$(MAKE) -f googletest/CMakeFiles/gtest_main.dir/build.make googletest/CMakeFiles/gtest_main.dir/build
+.PHONY : gtest_main/fast
+
+Network.o: Network.cpp.o
+.PHONY : Network.o
+
+# target to build an object file
+Network.cpp.o:
+	$(MAKE) -f CMakeFiles/Neuron.dir/build.make CMakeFiles/Neuron.dir/Network.cpp.o
+.PHONY : Network.cpp.o
+
+Network.i: Network.cpp.i
+.PHONY : Network.i
+
+# target to preprocess a source file
+Network.cpp.i:
+	$(MAKE) -f CMakeFiles/Neuron.dir/build.make CMakeFiles/Neuron.dir/Network.cpp.i
+.PHONY : Network.cpp.i
+
+Network.s: Network.cpp.s
+.PHONY : Network.s
+
+# target to generate assembly for a file
+Network.cpp.s:
+	$(MAKE) -f CMakeFiles/Neuron.dir/build.make CMakeFiles/Neuron.dir/Network.cpp.s
+.PHONY : Network.cpp.s
+
 Neuron.o: Neuron.cpp.o
 .PHONY : Neuron.o
 
 # target to build an object file
 Neuron.cpp.o:
 	$(MAKE) -f CMakeFiles/Neuron.dir/build.make CMakeFiles/Neuron.dir/Neuron.cpp.o
+	$(MAKE) -f CMakeFiles/UNITTEST.dir/build.make CMakeFiles/UNITTEST.dir/Neuron.cpp.o
 .PHONY : Neuron.cpp.o
 
 Neuron.i: Neuron.cpp.i
@@ -128,6 +202,7 @@ Neuron.i: Neuron.cpp.i
 # target to preprocess a source file
 Neuron.cpp.i:
 	$(MAKE) -f CMakeFiles/Neuron.dir/build.make CMakeFiles/Neuron.dir/Neuron.cpp.i
+	$(MAKE) -f CMakeFiles/UNITTEST.dir/build.make CMakeFiles/UNITTEST.dir/Neuron.cpp.i
 .PHONY : Neuron.cpp.i
 
 Neuron.s: Neuron.cpp.s
@@ -136,6 +211,7 @@ Neuron.s: Neuron.cpp.s
 # target to generate assembly for a file
 Neuron.cpp.s:
 	$(MAKE) -f CMakeFiles/Neuron.dir/build.make CMakeFiles/Neuron.dir/Neuron.cpp.s
+	$(MAKE) -f CMakeFiles/UNITTEST.dir/build.make CMakeFiles/UNITTEST.dir/Neuron.cpp.s
 .PHONY : Neuron.cpp.s
 
 NeuronMain.o: NeuronMain.cpp.o
@@ -162,6 +238,30 @@ NeuronMain.cpp.s:
 	$(MAKE) -f CMakeFiles/Neuron.dir/build.make CMakeFiles/Neuron.dir/NeuronMain.cpp.s
 .PHONY : NeuronMain.cpp.s
 
+UNITTEST.o: UNITTEST.cpp.o
+.PHONY : UNITTEST.o
+
+# target to build an object file
+UNITTEST.cpp.o:
+	$(MAKE) -f CMakeFiles/UNITTEST.dir/build.make CMakeFiles/UNITTEST.dir/UNITTEST.cpp.o
+.PHONY : UNITTEST.cpp.o
+
+UNITTEST.i: UNITTEST.cpp.i
+.PHONY : UNITTEST.i
+
+# target to preprocess a source file
+UNITTEST.cpp.i:
+	$(MAKE) -f CMakeFiles/UNITTEST.dir/build.make CMakeFiles/UNITTEST.dir/UNITTEST.cpp.i
+.PHONY : UNITTEST.cpp.i
+
+UNITTEST.s: UNITTEST.cpp.s
+.PHONY : UNITTEST.s
+
+# target to generate assembly for a file
+UNITTEST.cpp.s:
+	$(MAKE) -f CMakeFiles/UNITTEST.dir/build.make CMakeFiles/UNITTEST.dir/UNITTEST.cpp.s
+.PHONY : UNITTEST.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -169,14 +269,24 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... Neuron"
+	@echo "... UNITTEST"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... test"
+	@echo "... gtest"
+	@echo "... gtest_main"
+	@echo "... Network.o"
+	@echo "... Network.i"
+	@echo "... Network.s"
 	@echo "... Neuron.o"
 	@echo "... Neuron.i"
 	@echo "... Neuron.s"
 	@echo "... NeuronMain.o"
 	@echo "... NeuronMain.i"
 	@echo "... NeuronMain.s"
+	@echo "... UNITTEST.o"
+	@echo "... UNITTEST.i"
+	@echo "... UNITTEST.s"
 .PHONY : help
 
 
