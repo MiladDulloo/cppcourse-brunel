@@ -24,7 +24,7 @@ class Network
 	public:
 	Network();
 	void connect();														// connections of neurons
-	void updateALL(int, int);													// updates all neurons
+	void updateALL(int, int);											// updates all neurons, transfering spikes to targets
 	
 };
 
