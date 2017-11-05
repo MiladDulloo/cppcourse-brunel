@@ -1,3 +1,4 @@
+// DULLOO MILAD SVBA3
 #ifndef NEURON_H
 #define NEURON_H
 #include <iostream>
@@ -40,26 +41,21 @@ public:
 
 // getters	
 
-	double get_Iext();
+	double get_Iext();													// gets neuron external current
 	
-	double get_V() const;
+	double get_V() const;												// gets neuron membrane potential
 	
-	double get_spike_t() const;
+	double get_spike_t() const;											// gets neuron last spike time
 	
-	double get_spike_num() const;
+	double get_spike_num() const;										// gets neuron spike number
 	
 	
 // setters
 
-	void set_Iext(double newExtI);
-
-// Update function
-
-	bool Neurupdate(double steps);
-	
-// recieves spikes at time t with amplitude J
-
-	void spike_reception(long receptionT, double j);
+	void set_Iext(double newExtI);										// sets a new external current input
+								
+	bool Neurupdate(double steps);										// Updates neuron spikes state
+	void spike_reception(long receptionT, double j);						// neuron recieves spike at time reception t with amplitude j
 
 };
 
