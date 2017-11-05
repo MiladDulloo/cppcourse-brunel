@@ -44,5 +44,7 @@ To visualize spikes plot:
    pl.show();
   5) Click "RUN"
 
-                                     *** RESULTS ***       
-       -->    Graphical representation of neuron number as a function of spike times    <--
+                *************************** RESULTS **********************************    
+                Graphical representation of neuron number as a function of spike times
+                **********************************************************************
+  
