@@ -1,3 +1,5 @@
+/*! A Neuron class */
+// MILAD DULLOO SVBA3
 #ifndef NEURON_H
 #define NEURON_H
 #include <iostream>

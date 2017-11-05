@@ -1,3 +1,5 @@
+/*! Main simulation file */
+// MILAD DULLOO SVBA3
 #include "Neuron.hpp"
 #include "Network.hpp"
 #include <iostream>

@@ -1,3 +1,5 @@
+/*! A Network class */
+// MILAD DULLOO SVBA3
 #ifndef NETWORK_H
 #define NETWORK_H
 #include "Neuron.hpp"

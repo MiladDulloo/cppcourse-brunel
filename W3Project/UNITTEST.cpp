@@ -1,5 +1,5 @@
-// UNITTEST google tests
-
+/*! UNITTEST google tests */
+// MILAD DULLOO SVBA3
 #include <iostream>
 #include <cmath>
 #include "Neuron.hpp"

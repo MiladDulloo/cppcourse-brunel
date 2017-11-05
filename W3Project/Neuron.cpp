@@ -1,3 +1,4 @@
+// MILAD DULLOO SVBA3
 #include "Neuron.hpp"
 #include <iostream>
 #include <cmath>
