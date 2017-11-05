@@ -34,32 +34,27 @@ private:
 	std::vector<double> buffer;				// spikes buffer ring
 
 
-public:		
+public:	
 	
-	Neuron(); 								// constructor
+// constructor
+	Neuron(); 								
 
 // getters	
-
-	double get_Iext();
+	double get_Iext();													// gets neuron's external current input
 	
-	double get_V() const;
+	double get_V() const;												// gets neuron's membrane potential
 	
-	double get_spike_t() const;
+	double get_spike_t() const;											// gets neuron's spike time
 	
-	double get_spike_num() const;
+	double get_spike_num() const;										// gets neuron's spike number
 	
 	
 // setters
+	void set_Iext(double newExtI);										// sets external current input
 
-	void set_Iext(double newExtI);
 
-// Update function
-
-	bool Neurupdate(double steps);
-	
-// recieves spikes at time t with amplitude J
-
-	void spike_reception(long receptionT, double j);
+	bool Neurupdate(double steps);										// Updates neuron and checks if spiked
+	void spike_reception(long receptionT, double j);					// recieves spikes at time t with amplitude J
 
 };
 

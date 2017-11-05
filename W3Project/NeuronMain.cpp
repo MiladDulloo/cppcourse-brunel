@@ -13,12 +13,9 @@ int main()
 	
 
 //Simulation
-	Network Net;
-	
-	Net.connect();
-		
-	//cout << "easy" << endl;
-	Net.updateALL(t_start, t_stop);
+	Network Net;							// Network creation
+	Net.connect();							// Network connection
+	Net.updateALL(t_start, t_stop);			// Network simulation run
 	
 	return 0;
 };
