@@ -7,7 +7,7 @@ enable_testing()
 add_subdirectory(googletest)
 include_directories(${gtest_SOURCE_DIR}/include ${googletest_SOURCE_DIR})
 
-add_executable (Neuron Neuron.cpp NeuronMain.cpp)
+add_executable (neuron Network.cpp Neuron.cpp NeuronMain.cpp)
 add_executable (UNITTEST Neuron.cpp UNITTEST.cpp)
 
 target_link_libraries(UNITTEST gtest gtest_main)

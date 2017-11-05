@@ -1,5 +1,3 @@
-// DULLOO MILAD SVBA3
-
 #include "Network.hpp"
 #include "Neuron.hpp"
 #include <iostream>
@@ -9,21 +7,21 @@
 using namespace std;
 
 
+// Constructor initialization list
 
-
-	Network::Network():													// Constructor initialization list								
+	Network::Network():																	
 	N_E(10000), N_I(2500), C_E(1000), C_I(250),		
 	Jex(0.1), Jin(-0.5)
 	{
 	    	
-	for (int i(0); i<12500; ++i)										// Initializes new neurons in neuron vector
+	for (int i(0); i<12500; ++i)												// Creates new neurons in neuron vector
 		{ 
 			neuronsVec.push_back(Neuron());								
 	    }
 	    
-	for (int i(0); i<12500; ++i)										// Initializes the network vector connections
+	for (int i(0); i<12500; ++i)												// Initializes the network vector to all 0s
 	    {  
-			vector<int> addconect;	
+			vector<int> addconect;
 			network.push_back(addconect);
 			
 		}
@@ -32,69 +30,80 @@ using namespace std;
 
 	void Network::connect()												// Connects network randomly
 { 
-	for (int n=0; n<12500; ++n)											// FOR ALL neurons:
+	for (int n=0; n<12500; ++n)												// On ALL neurons
 		{
-			for (int e=0; e<1000; ++e)									// Excitatory connections
+			for (int e=0; e<1000; ++e)										// Excitatory connections
 			{
-				 static random_device rd;								//// choses a connected neuron
-				 static mt19937 gen(rd());								//// with a uniform distribution
-				 static uniform_int_distribution<> connections(0, N_E -1);
-				network[connections(gen)].push_back(n);					// assigns the randomly chosen neuron to the eth excitatory neuron
+				 static random_device rd;									//// 
+				 static mt19937 gen(rd());									////	choses a connected neuron with a uniform distribution
+				 static uniform_int_distribution<> connections(0, N_E -1);		////
+				network[connections(gen)].push_back(n);					// assigns the randomly chosen excit neuron to the nth excitatory neuron
 			}
 	
 			for (int i=10000; i<12500; ++i)								// Inhibitory connections
 			{
-				static random_device rd;								////
-				static mt19937 gen(rd());								////choses a connected inhib neuron with a uniform distribution
-				static uniform_int_distribution<> connections(N_E, 12500 -1);////
+				static random_device rd;									////
+				static mt19937 gen(rd());									////	choses a connected inhib neuron with a uniform distribution
+				static uniform_int_distribution<> connections(N_E, 12500 -1);	////
 				network[connections(gen)].push_back(n);					// assigns the randomly chosen neuron to the nth inhibitory neuron
 		}
 	}
 }
 
-	void Network::updateALL(int runningSimulation, int stopTime)		// Transfers spikes from neurons to their connected targets
+	void Network::updateALL(int simtime, int stop)											// Transfers spikes from neurons and their connected targets
 	{
 		
-			ofstream MembranePotentials ;								// prints spikes on a text file..
+			ofstream MembranePotentials ;
 			MembranePotentials.open ("MembranePot.txt");
-			int loadRate(0.01*stopTime);
-	  while(runningSimulation < stopTime)								// ..while the simulation is running
-	  {	
 			
-			if(runningSimulation > loadRate)
+			
+			int progress(1);
+			int progress_rate(0.01*stop);
+			
+			
+	    while(simtime < stop)
+		{	
+			
+			if(simtime > progress_rate)
 			{
-				cout << "loading" << endl;
-				loadRate += 0.01*stopTime;
+				cout << progress << "%" << endl;
+				++progress;
+				progress_rate += 0.01*stop;
 			}
 			
 			
-		for(int i=0; i<12500; ++i)
-		{
+			for(int i=0; i<12500; ++i)
+		   {
 			
-			int J;														// Amplitude value..
-			if (i<=10000)												// ..for first 10000 excitatory neurons
-			{J = Jex;} 
-			else 
-			{J = Jin;}													// ..for last 2500 neurons are inhibitory
+				int J;												// Amplitude value..
+						if (i<=10000)										// ..for first 10000 excitatory neurons
+						{J = Jex;} 
+						else 
+						{J = Jin;}											// ..for last 2500 neurons are inhibitory
 				
-			if (neuronsVec[i].Neurupdate(1))							// IF SPIKE HAPPENED at neuron "i"
-			{		
-          MembranePotentials << runningSimulation << "\t " << i << endl;// writes time at which spike happened
+				if (neuronsVec[i].Neurupdate(1))								// IF SPIKE HAPPENED at neuron "i"
+				{ 
+
+					
+                    MembranePotentials << simtime << "\t " << i << endl;
 								
 		
 						
-			for (int k=0; k < network[i].size(); ++k)					// iterates over all target neurons to check conncections	
-				{	
+						for (int k=0; k < network[i].size(); ++k)								// iterates over all target neurons to check conncections	
+						{	
+						  
+							 //cout << "ici" << endl;
 							 
-				int target_neuron = network[i][k];						// finds all target neurons locations
-				neuronsVec[target_neuron].spike_reception(runningSimulation + 15, J);	// gives that spike to the connected target neurons
+							 int target_neuron = network[i][k];
+							 neuronsVec[target_neuron].spike_reception(simtime + 15, J);	// gives that spike from "i neuron" to the connected target neurons k
 							
-				}				 
+						}
+						 
+				}
 			}
-		}
 				
-		++runningSimulation;
-	 }
+			++simtime;
+		  }
 		  	MembranePotentials.close();	
 	    }
 		

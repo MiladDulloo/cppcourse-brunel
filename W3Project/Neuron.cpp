@@ -1,4 +1,3 @@
-// DULLOO MILAD SVBA3
 #include "Neuron.hpp"
 #include <iostream>
 #include <cmath>
@@ -6,8 +5,11 @@
 #include <string>
 #include <map>
 #include <random>
+
 using namespace std;
-																		// Constructor initialization list
+
+// Constructor initialization list
+
 Neuron::Neuron():
 Iext(0.0), V(0.0), spike_t(0.0), spike_num(0.0), local_t(0.0), g(5), R(20.0), Tau(20.0), thld(20.0), Vreset(0.0), refrac_t(2.0),
 h(0.1), refrac_steps(refrac_t / h), delay(15), j(0.1)
@@ -19,22 +21,22 @@ h(0.1), refrac_steps(refrac_t / h), delay(15), j(0.1)
 
 // getters	
 
-double Neuron::get_Iext()												// gives neuron external current input
+double Neuron::get_Iext()
 	{ return Iext; }
 	
-double Neuron::get_V() const											// gives neuron pottential
+double Neuron::get_V() const
 	{ return V; }
 	
-double Neuron::get_spike_t() const										// gives last spike time
+double Neuron::get_spike_t() const
 	{ return spike_t; }
 	
-double Neuron::get_spike_num() const									// gives spike number
+double Neuron::get_spike_num() const
 	{ return spike_num; }
 	
 	
 // setters
 
-void Neuron::set_Iext(double newExtI)									// sets neuron's external current input
+void Neuron::set_Iext(double newExtI)
 	{ Iext = newExtI; }
 	
 	
@@ -55,12 +57,12 @@ bool Neuron::Neurupdate(double steps)
 					spike_t  = local_t;									//latest spike time stores
 				
 				}
-		if ((spike_t > 0.0) and (local_t - spike_t) < refrac_steps) 		//if neuron is refractory (in refrac period)
+		if ((spike_t > 0.0) and (local_t - spike_t) < refrac_steps) //if neuron is refractory (in refrac period)
 				{ V = 0.0;}												//depolarization reset to Vreset after refractory period
 				  														
 			else
 			{ 						
-				potentials_vector.push_back(V); 							//Adds new membrane pot to vector
+				potentials_vector.push_back(V); 						//Adds new membrane pot to vector
 				static random_device rd;
 				static mt19937 gen(rd());
 				static poisson_distribution<> extnoiseinput(2);
@@ -76,7 +78,7 @@ bool Neuron::Neurupdate(double steps)
 	
 // Spike reception
 
-void Neuron::spike_reception(long receptionT, double j)					// neuron recieves spike at time reception t with amplitude j
+void Neuron::spike_reception(long receptionT, double j)
 	{
 		size_t outTime = receptionT % (delay +1);						//ring buffer ejection time of spik(slide 15 week4)
 		buffer[outTime]+=j;												//writing spikes
