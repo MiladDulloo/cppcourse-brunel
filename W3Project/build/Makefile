@@ -112,19 +112,6 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Neuron
-
-# Build rule for target.
-Neuron: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 Neuron
-.PHONY : Neuron
-
-# fast build rule for target.
-Neuron/fast:
-	$(MAKE) -f CMakeFiles/Neuron.dir/build.make CMakeFiles/Neuron.dir/build
-.PHONY : Neuron/fast
-
-#=============================================================================
 # Target rules for targets named UNITTEST
 
 # Build rule for target.
@@ -136,6 +123,19 @@ UNITTEST: cmake_check_build_system
 UNITTEST/fast:
 	$(MAKE) -f CMakeFiles/UNITTEST.dir/build.make CMakeFiles/UNITTEST.dir/build
 .PHONY : UNITTEST/fast
+
+#=============================================================================
+# Target rules for targets named neuron
+
+# Build rule for target.
+neuron: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 neuron
+.PHONY : neuron
+
+# fast build rule for target.
+neuron/fast:
+	$(MAKE) -f CMakeFiles/neuron.dir/build.make CMakeFiles/neuron.dir/build
+.PHONY : neuron/fast
 
 #=============================================================================
 # Target rules for targets named gtest
@@ -168,7 +168,7 @@ Network.o: Network.cpp.o
 
 # target to build an object file
 Network.cpp.o:
-	$(MAKE) -f CMakeFiles/Neuron.dir/build.make CMakeFiles/Neuron.dir/Network.cpp.o
+	$(MAKE) -f CMakeFiles/neuron.dir/build.make CMakeFiles/neuron.dir/Network.cpp.o
 .PHONY : Network.cpp.o
 
 Network.i: Network.cpp.i
@@ -176,7 +176,7 @@ Network.i: Network.cpp.i
 
 # target to preprocess a source file
 Network.cpp.i:
-	$(MAKE) -f CMakeFiles/Neuron.dir/build.make CMakeFiles/Neuron.dir/Network.cpp.i
+	$(MAKE) -f CMakeFiles/neuron.dir/build.make CMakeFiles/neuron.dir/Network.cpp.i
 .PHONY : Network.cpp.i
 
 Network.s: Network.cpp.s
@@ -184,7 +184,7 @@ Network.s: Network.cpp.s
 
 # target to generate assembly for a file
 Network.cpp.s:
-	$(MAKE) -f CMakeFiles/Neuron.dir/build.make CMakeFiles/Neuron.dir/Network.cpp.s
+	$(MAKE) -f CMakeFiles/neuron.dir/build.make CMakeFiles/neuron.dir/Network.cpp.s
 .PHONY : Network.cpp.s
 
 Neuron.o: Neuron.cpp.o
@@ -192,8 +192,8 @@ Neuron.o: Neuron.cpp.o
 
 # target to build an object file
 Neuron.cpp.o:
-	$(MAKE) -f CMakeFiles/Neuron.dir/build.make CMakeFiles/Neuron.dir/Neuron.cpp.o
 	$(MAKE) -f CMakeFiles/UNITTEST.dir/build.make CMakeFiles/UNITTEST.dir/Neuron.cpp.o
+	$(MAKE) -f CMakeFiles/neuron.dir/build.make CMakeFiles/neuron.dir/Neuron.cpp.o
 .PHONY : Neuron.cpp.o
 
 Neuron.i: Neuron.cpp.i
@@ -201,8 +201,8 @@ Neuron.i: Neuron.cpp.i
 
 # target to preprocess a source file
 Neuron.cpp.i:
-	$(MAKE) -f CMakeFiles/Neuron.dir/build.make CMakeFiles/Neuron.dir/Neuron.cpp.i
 	$(MAKE) -f CMakeFiles/UNITTEST.dir/build.make CMakeFiles/UNITTEST.dir/Neuron.cpp.i
+	$(MAKE) -f CMakeFiles/neuron.dir/build.make CMakeFiles/neuron.dir/Neuron.cpp.i
 .PHONY : Neuron.cpp.i
 
 Neuron.s: Neuron.cpp.s
@@ -210,8 +210,8 @@ Neuron.s: Neuron.cpp.s
 
 # target to generate assembly for a file
 Neuron.cpp.s:
-	$(MAKE) -f CMakeFiles/Neuron.dir/build.make CMakeFiles/Neuron.dir/Neuron.cpp.s
 	$(MAKE) -f CMakeFiles/UNITTEST.dir/build.make CMakeFiles/UNITTEST.dir/Neuron.cpp.s
+	$(MAKE) -f CMakeFiles/neuron.dir/build.make CMakeFiles/neuron.dir/Neuron.cpp.s
 .PHONY : Neuron.cpp.s
 
 NeuronMain.o: NeuronMain.cpp.o
@@ -219,7 +219,7 @@ NeuronMain.o: NeuronMain.cpp.o
 
 # target to build an object file
 NeuronMain.cpp.o:
-	$(MAKE) -f CMakeFiles/Neuron.dir/build.make CMakeFiles/Neuron.dir/NeuronMain.cpp.o
+	$(MAKE) -f CMakeFiles/neuron.dir/build.make CMakeFiles/neuron.dir/NeuronMain.cpp.o
 .PHONY : NeuronMain.cpp.o
 
 NeuronMain.i: NeuronMain.cpp.i
@@ -227,7 +227,7 @@ NeuronMain.i: NeuronMain.cpp.i
 
 # target to preprocess a source file
 NeuronMain.cpp.i:
-	$(MAKE) -f CMakeFiles/Neuron.dir/build.make CMakeFiles/Neuron.dir/NeuronMain.cpp.i
+	$(MAKE) -f CMakeFiles/neuron.dir/build.make CMakeFiles/neuron.dir/NeuronMain.cpp.i
 .PHONY : NeuronMain.cpp.i
 
 NeuronMain.s: NeuronMain.cpp.s
@@ -235,7 +235,7 @@ NeuronMain.s: NeuronMain.cpp.s
 
 # target to generate assembly for a file
 NeuronMain.cpp.s:
-	$(MAKE) -f CMakeFiles/Neuron.dir/build.make CMakeFiles/Neuron.dir/NeuronMain.cpp.s
+	$(MAKE) -f CMakeFiles/neuron.dir/build.make CMakeFiles/neuron.dir/NeuronMain.cpp.s
 .PHONY : NeuronMain.cpp.s
 
 UNITTEST.o: UNITTEST.cpp.o
@@ -268,8 +268,8 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... Neuron"
 	@echo "... UNITTEST"
+	@echo "... neuron"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
