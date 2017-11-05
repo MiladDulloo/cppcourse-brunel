@@ -43,3 +43,6 @@ To visualize spikes plot:
    n, bins, patches = pl.hist(0.1*data1[0], 50, normed=0, alpha=0.75)
    pl.show();
   5) Click "RUN"
+
+                                     *** RESULTS ***       
+       -->    Graphical representation of neuron number as a function of spike times    <--
