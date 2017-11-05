@@ -1,4 +1,4 @@
-/home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/build/CMakeFiles/Neuron.dir
 /home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/build/CMakeFiles/UNITTEST.dir
+/home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/build/CMakeFiles/neuron.dir
 /home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/build/googletest/CMakeFiles/gtest.dir
 /home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/build/googletest/CMakeFiles/gtest_main.dir

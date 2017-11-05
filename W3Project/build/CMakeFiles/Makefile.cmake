@@ -51,8 +51,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/Neuron.dir/DependInfo.cmake"
   "CMakeFiles/UNITTEST.dir/DependInfo.cmake"
+  "CMakeFiles/neuron.dir/DependInfo.cmake"
   "googletest/CMakeFiles/gtest.dir/DependInfo.cmake"
   "googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake"
   )

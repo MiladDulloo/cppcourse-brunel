@@ -53,41 +53,6 @@ CMAKE_SOURCE_DIR = /home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Proj
 CMAKE_BINARY_DIR = /home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/build
 
 #=============================================================================
-# Target rules for target CMakeFiles/Neuron.dir
-
-# All Build rule for target.
-CMakeFiles/Neuron.dir/all:
-	$(MAKE) -f CMakeFiles/Neuron.dir/build.make CMakeFiles/Neuron.dir/depend
-	$(MAKE) -f CMakeFiles/Neuron.dir/build.make CMakeFiles/Neuron.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/build/CMakeFiles  1 2 3
-	@echo "Built target Neuron"
-.PHONY : CMakeFiles/Neuron.dir/all
-
-# Include target in all.
-all: CMakeFiles/Neuron.dir/all
-.PHONY : all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/Neuron.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/build/CMakeFiles 3
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/Neuron.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/build/CMakeFiles 0
-.PHONY : CMakeFiles/Neuron.dir/rule
-
-# Convenience name for target.
-Neuron: CMakeFiles/Neuron.dir/rule
-.PHONY : Neuron
-
-# clean rule for target.
-CMakeFiles/Neuron.dir/clean:
-	$(MAKE) -f CMakeFiles/Neuron.dir/build.make CMakeFiles/Neuron.dir/clean
-.PHONY : CMakeFiles/Neuron.dir/clean
-
-# clean rule for target.
-clean: CMakeFiles/Neuron.dir/clean
-.PHONY : clean
-
-#=============================================================================
 # Target rules for target CMakeFiles/UNITTEST.dir
 
 # All Build rule for target.
@@ -95,7 +60,7 @@ CMakeFiles/UNITTEST.dir/all: googletest/CMakeFiles/gtest.dir/all
 CMakeFiles/UNITTEST.dir/all: googletest/CMakeFiles/gtest_main.dir/all
 	$(MAKE) -f CMakeFiles/UNITTEST.dir/build.make CMakeFiles/UNITTEST.dir/depend
 	$(MAKE) -f CMakeFiles/UNITTEST.dir/build.make CMakeFiles/UNITTEST.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/build/CMakeFiles  4 5
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/build/CMakeFiles  1 2
 	@echo "Built target UNITTEST"
 .PHONY : CMakeFiles/UNITTEST.dir/all
 
@@ -124,6 +89,41 @@ clean: CMakeFiles/UNITTEST.dir/clean
 .PHONY : clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/neuron.dir
+
+# All Build rule for target.
+CMakeFiles/neuron.dir/all:
+	$(MAKE) -f CMakeFiles/neuron.dir/build.make CMakeFiles/neuron.dir/depend
+	$(MAKE) -f CMakeFiles/neuron.dir/build.make CMakeFiles/neuron.dir/build
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/build/CMakeFiles  5 6 7
+	@echo "Built target neuron"
+.PHONY : CMakeFiles/neuron.dir/all
+
+# Include target in all.
+all: CMakeFiles/neuron.dir/all
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/neuron.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/build/CMakeFiles 3
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/neuron.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/build/CMakeFiles 0
+.PHONY : CMakeFiles/neuron.dir/rule
+
+# Convenience name for target.
+neuron: CMakeFiles/neuron.dir/rule
+.PHONY : neuron
+
+# clean rule for target.
+CMakeFiles/neuron.dir/clean:
+	$(MAKE) -f CMakeFiles/neuron.dir/build.make CMakeFiles/neuron.dir/clean
+.PHONY : CMakeFiles/neuron.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/neuron.dir/clean
+.PHONY : clean
+
+#=============================================================================
 # Directory level rules for directory googletest
 
 # Convenience name for "all" pass in the directory.
@@ -147,7 +147,7 @@ googletest/preinstall:
 googletest/CMakeFiles/gtest.dir/all:
 	$(MAKE) -f googletest/CMakeFiles/gtest.dir/build.make googletest/CMakeFiles/gtest.dir/depend
 	$(MAKE) -f googletest/CMakeFiles/gtest.dir/build.make googletest/CMakeFiles/gtest.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/build/CMakeFiles  6
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/build/CMakeFiles  3
 	@echo "Built target gtest"
 .PHONY : googletest/CMakeFiles/gtest.dir/all
 
@@ -182,7 +182,7 @@ clean: googletest/CMakeFiles/gtest.dir/clean
 googletest/CMakeFiles/gtest_main.dir/all: googletest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f googletest/CMakeFiles/gtest_main.dir/build.make googletest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) -f googletest/CMakeFiles/gtest_main.dir/build.make googletest/CMakeFiles/gtest_main.dir/build
-	$(CMAKE_COMMAND) -E cmake_progress_report /home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/build/CMakeFiles  7
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/build/CMakeFiles  4
 	@echo "Built target gtest_main"
 .PHONY : googletest/CMakeFiles/gtest_main.dir/all
 

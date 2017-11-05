@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/Network.cpp" "/home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/build/CMakeFiles/Neuron.dir/Network.cpp.o"
-  "/home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/Neuron.cpp" "/home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/build/CMakeFiles/Neuron.dir/Neuron.cpp.o"
-  "/home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/NeuronMain.cpp" "/home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/build/CMakeFiles/Neuron.dir/NeuronMain.cpp.o"
+  "/home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/Network.cpp" "/home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/build/CMakeFiles/neuron.dir/Network.cpp.o"
+  "/home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/Neuron.cpp" "/home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/build/CMakeFiles/neuron.dir/Neuron.cpp.o"
+  "/home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/NeuronMain.cpp" "/home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/build/CMakeFiles/neuron.dir/NeuronMain.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

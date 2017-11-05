@@ -1,12 +1,12 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Neuron.dir/Network.cpp.o"
-  "CMakeFiles/Neuron.dir/Neuron.cpp.o"
-  "CMakeFiles/Neuron.dir/NeuronMain.cpp.o"
-  "Neuron.pdb"
-  "Neuron"
+  "CMakeFiles/neuron.dir/Network.cpp.o"
+  "CMakeFiles/neuron.dir/Neuron.cpp.o"
+  "CMakeFiles/neuron.dir/NeuronMain.cpp.o"
+  "neuron.pdb"
+  "neuron"
 )
 
 # Per-language clean rules from dependency scanning.
 foreach(lang CXX)
-  include(CMakeFiles/Neuron.dir/cmake_clean_${lang}.cmake OPTIONAL)
+  include(CMakeFiles/neuron.dir/cmake_clean_${lang}.cmake OPTIONAL)
 endforeach()

@@ -41,114 +41,114 @@ CMAKE_SOURCE_DIR = /home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Proj
 CMAKE_BINARY_DIR = /home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/build
 
 # Include any dependencies generated for this target.
-include CMakeFiles/Neuron.dir/depend.make
+include CMakeFiles/neuron.dir/depend.make
 
 # Include the progress variables for this target.
-include CMakeFiles/Neuron.dir/progress.make
+include CMakeFiles/neuron.dir/progress.make
 
 # Include the compile flags for this target's objects.
-include CMakeFiles/Neuron.dir/flags.make
+include CMakeFiles/neuron.dir/flags.make
 
-CMakeFiles/Neuron.dir/Network.cpp.o: CMakeFiles/Neuron.dir/flags.make
-CMakeFiles/Neuron.dir/Network.cpp.o: ../Network.cpp
+CMakeFiles/neuron.dir/Network.cpp.o: CMakeFiles/neuron.dir/flags.make
+CMakeFiles/neuron.dir/Network.cpp.o: ../Network.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/build/CMakeFiles $(CMAKE_PROGRESS_1)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Neuron.dir/Network.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Neuron.dir/Network.cpp.o -c /home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/Network.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/neuron.dir/Network.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/neuron.dir/Network.cpp.o -c /home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/Network.cpp
 
-CMakeFiles/Neuron.dir/Network.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Neuron.dir/Network.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/Network.cpp > CMakeFiles/Neuron.dir/Network.cpp.i
+CMakeFiles/neuron.dir/Network.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neuron.dir/Network.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/Network.cpp > CMakeFiles/neuron.dir/Network.cpp.i
 
-CMakeFiles/Neuron.dir/Network.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Neuron.dir/Network.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/Network.cpp -o CMakeFiles/Neuron.dir/Network.cpp.s
+CMakeFiles/neuron.dir/Network.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neuron.dir/Network.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/Network.cpp -o CMakeFiles/neuron.dir/Network.cpp.s
 
-CMakeFiles/Neuron.dir/Network.cpp.o.requires:
-.PHONY : CMakeFiles/Neuron.dir/Network.cpp.o.requires
+CMakeFiles/neuron.dir/Network.cpp.o.requires:
+.PHONY : CMakeFiles/neuron.dir/Network.cpp.o.requires
 
-CMakeFiles/Neuron.dir/Network.cpp.o.provides: CMakeFiles/Neuron.dir/Network.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Neuron.dir/build.make CMakeFiles/Neuron.dir/Network.cpp.o.provides.build
-.PHONY : CMakeFiles/Neuron.dir/Network.cpp.o.provides
+CMakeFiles/neuron.dir/Network.cpp.o.provides: CMakeFiles/neuron.dir/Network.cpp.o.requires
+	$(MAKE) -f CMakeFiles/neuron.dir/build.make CMakeFiles/neuron.dir/Network.cpp.o.provides.build
+.PHONY : CMakeFiles/neuron.dir/Network.cpp.o.provides
 
-CMakeFiles/Neuron.dir/Network.cpp.o.provides.build: CMakeFiles/Neuron.dir/Network.cpp.o
+CMakeFiles/neuron.dir/Network.cpp.o.provides.build: CMakeFiles/neuron.dir/Network.cpp.o
 
-CMakeFiles/Neuron.dir/Neuron.cpp.o: CMakeFiles/Neuron.dir/flags.make
-CMakeFiles/Neuron.dir/Neuron.cpp.o: ../Neuron.cpp
+CMakeFiles/neuron.dir/Neuron.cpp.o: CMakeFiles/neuron.dir/flags.make
+CMakeFiles/neuron.dir/Neuron.cpp.o: ../Neuron.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/build/CMakeFiles $(CMAKE_PROGRESS_2)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Neuron.dir/Neuron.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Neuron.dir/Neuron.cpp.o -c /home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/Neuron.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/neuron.dir/Neuron.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/neuron.dir/Neuron.cpp.o -c /home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/Neuron.cpp
 
-CMakeFiles/Neuron.dir/Neuron.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Neuron.dir/Neuron.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/Neuron.cpp > CMakeFiles/Neuron.dir/Neuron.cpp.i
+CMakeFiles/neuron.dir/Neuron.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neuron.dir/Neuron.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/Neuron.cpp > CMakeFiles/neuron.dir/Neuron.cpp.i
 
-CMakeFiles/Neuron.dir/Neuron.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Neuron.dir/Neuron.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/Neuron.cpp -o CMakeFiles/Neuron.dir/Neuron.cpp.s
+CMakeFiles/neuron.dir/Neuron.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neuron.dir/Neuron.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/Neuron.cpp -o CMakeFiles/neuron.dir/Neuron.cpp.s
 
-CMakeFiles/Neuron.dir/Neuron.cpp.o.requires:
-.PHONY : CMakeFiles/Neuron.dir/Neuron.cpp.o.requires
+CMakeFiles/neuron.dir/Neuron.cpp.o.requires:
+.PHONY : CMakeFiles/neuron.dir/Neuron.cpp.o.requires
 
-CMakeFiles/Neuron.dir/Neuron.cpp.o.provides: CMakeFiles/Neuron.dir/Neuron.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Neuron.dir/build.make CMakeFiles/Neuron.dir/Neuron.cpp.o.provides.build
-.PHONY : CMakeFiles/Neuron.dir/Neuron.cpp.o.provides
+CMakeFiles/neuron.dir/Neuron.cpp.o.provides: CMakeFiles/neuron.dir/Neuron.cpp.o.requires
+	$(MAKE) -f CMakeFiles/neuron.dir/build.make CMakeFiles/neuron.dir/Neuron.cpp.o.provides.build
+.PHONY : CMakeFiles/neuron.dir/Neuron.cpp.o.provides
 
-CMakeFiles/Neuron.dir/Neuron.cpp.o.provides.build: CMakeFiles/Neuron.dir/Neuron.cpp.o
+CMakeFiles/neuron.dir/Neuron.cpp.o.provides.build: CMakeFiles/neuron.dir/Neuron.cpp.o
 
-CMakeFiles/Neuron.dir/NeuronMain.cpp.o: CMakeFiles/Neuron.dir/flags.make
-CMakeFiles/Neuron.dir/NeuronMain.cpp.o: ../NeuronMain.cpp
+CMakeFiles/neuron.dir/NeuronMain.cpp.o: CMakeFiles/neuron.dir/flags.make
+CMakeFiles/neuron.dir/NeuronMain.cpp.o: ../NeuronMain.cpp
 	$(CMAKE_COMMAND) -E cmake_progress_report /home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/build/CMakeFiles $(CMAKE_PROGRESS_3)
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/Neuron.dir/NeuronMain.cpp.o"
-	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/Neuron.dir/NeuronMain.cpp.o -c /home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/NeuronMain.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/neuron.dir/NeuronMain.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/neuron.dir/NeuronMain.cpp.o -c /home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/NeuronMain.cpp
 
-CMakeFiles/Neuron.dir/NeuronMain.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Neuron.dir/NeuronMain.cpp.i"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/NeuronMain.cpp > CMakeFiles/Neuron.dir/NeuronMain.cpp.i
+CMakeFiles/neuron.dir/NeuronMain.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/neuron.dir/NeuronMain.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/NeuronMain.cpp > CMakeFiles/neuron.dir/NeuronMain.cpp.i
 
-CMakeFiles/Neuron.dir/NeuronMain.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Neuron.dir/NeuronMain.cpp.s"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/NeuronMain.cpp -o CMakeFiles/Neuron.dir/NeuronMain.cpp.s
+CMakeFiles/neuron.dir/NeuronMain.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/neuron.dir/NeuronMain.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/NeuronMain.cpp -o CMakeFiles/neuron.dir/NeuronMain.cpp.s
 
-CMakeFiles/Neuron.dir/NeuronMain.cpp.o.requires:
-.PHONY : CMakeFiles/Neuron.dir/NeuronMain.cpp.o.requires
+CMakeFiles/neuron.dir/NeuronMain.cpp.o.requires:
+.PHONY : CMakeFiles/neuron.dir/NeuronMain.cpp.o.requires
 
-CMakeFiles/Neuron.dir/NeuronMain.cpp.o.provides: CMakeFiles/Neuron.dir/NeuronMain.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Neuron.dir/build.make CMakeFiles/Neuron.dir/NeuronMain.cpp.o.provides.build
-.PHONY : CMakeFiles/Neuron.dir/NeuronMain.cpp.o.provides
+CMakeFiles/neuron.dir/NeuronMain.cpp.o.provides: CMakeFiles/neuron.dir/NeuronMain.cpp.o.requires
+	$(MAKE) -f CMakeFiles/neuron.dir/build.make CMakeFiles/neuron.dir/NeuronMain.cpp.o.provides.build
+.PHONY : CMakeFiles/neuron.dir/NeuronMain.cpp.o.provides
 
-CMakeFiles/Neuron.dir/NeuronMain.cpp.o.provides.build: CMakeFiles/Neuron.dir/NeuronMain.cpp.o
+CMakeFiles/neuron.dir/NeuronMain.cpp.o.provides.build: CMakeFiles/neuron.dir/NeuronMain.cpp.o
 
-# Object files for target Neuron
-Neuron_OBJECTS = \
-"CMakeFiles/Neuron.dir/Network.cpp.o" \
-"CMakeFiles/Neuron.dir/Neuron.cpp.o" \
-"CMakeFiles/Neuron.dir/NeuronMain.cpp.o"
+# Object files for target neuron
+neuron_OBJECTS = \
+"CMakeFiles/neuron.dir/Network.cpp.o" \
+"CMakeFiles/neuron.dir/Neuron.cpp.o" \
+"CMakeFiles/neuron.dir/NeuronMain.cpp.o"
 
-# External object files for target Neuron
-Neuron_EXTERNAL_OBJECTS =
+# External object files for target neuron
+neuron_EXTERNAL_OBJECTS =
 
-Neuron: CMakeFiles/Neuron.dir/Network.cpp.o
-Neuron: CMakeFiles/Neuron.dir/Neuron.cpp.o
-Neuron: CMakeFiles/Neuron.dir/NeuronMain.cpp.o
-Neuron: CMakeFiles/Neuron.dir/build.make
-Neuron: CMakeFiles/Neuron.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable Neuron"
-	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Neuron.dir/link.txt --verbose=$(VERBOSE)
+neuron: CMakeFiles/neuron.dir/Network.cpp.o
+neuron: CMakeFiles/neuron.dir/Neuron.cpp.o
+neuron: CMakeFiles/neuron.dir/NeuronMain.cpp.o
+neuron: CMakeFiles/neuron.dir/build.make
+neuron: CMakeFiles/neuron.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --red --bold "Linking CXX executable neuron"
+	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/neuron.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/Neuron.dir/build: Neuron
-.PHONY : CMakeFiles/Neuron.dir/build
+CMakeFiles/neuron.dir/build: neuron
+.PHONY : CMakeFiles/neuron.dir/build
 
-CMakeFiles/Neuron.dir/requires: CMakeFiles/Neuron.dir/Network.cpp.o.requires
-CMakeFiles/Neuron.dir/requires: CMakeFiles/Neuron.dir/Neuron.cpp.o.requires
-CMakeFiles/Neuron.dir/requires: CMakeFiles/Neuron.dir/NeuronMain.cpp.o.requires
-.PHONY : CMakeFiles/Neuron.dir/requires
+CMakeFiles/neuron.dir/requires: CMakeFiles/neuron.dir/Network.cpp.o.requires
+CMakeFiles/neuron.dir/requires: CMakeFiles/neuron.dir/Neuron.cpp.o.requires
+CMakeFiles/neuron.dir/requires: CMakeFiles/neuron.dir/NeuronMain.cpp.o.requires
+.PHONY : CMakeFiles/neuron.dir/requires
 
-CMakeFiles/Neuron.dir/clean:
-	$(CMAKE_COMMAND) -P CMakeFiles/Neuron.dir/cmake_clean.cmake
-.PHONY : CMakeFiles/Neuron.dir/clean
+CMakeFiles/neuron.dir/clean:
+	$(CMAKE_COMMAND) -P CMakeFiles/neuron.dir/cmake_clean.cmake
+.PHONY : CMakeFiles/neuron.dir/clean
 
-CMakeFiles/Neuron.dir/depend:
-	cd /home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project /home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project /home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/build /home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/build /home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/build/CMakeFiles/Neuron.dir/DependInfo.cmake --color=$(COLOR)
-.PHONY : CMakeFiles/Neuron.dir/depend
+CMakeFiles/neuron.dir/depend:
+	cd /home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project /home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project /home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/build /home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/build /home/INTRANET/dulloo/myfiles/CS116-2017-milad-dulloo-/W3Project/build/CMakeFiles/neuron.dir/DependInfo.cmake --color=$(COLOR)
+.PHONY : CMakeFiles/neuron.dir/depend
 
