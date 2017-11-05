@@ -1,4 +1,3 @@
-// DULLOO MILAD SVBA3
 // UNITTEST google tests
 
 #include <iostream>

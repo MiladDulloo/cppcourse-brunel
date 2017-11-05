@@ -1,5 +1,3 @@
-// DULLOO MILAD SVBA3
-
 #ifndef NETWORK_H
 #define NETWORK_H
 #include "Neuron.hpp"
@@ -20,11 +18,13 @@ class Network
 	int Jin;															// amplitude of inhibitory neurons
 	vector<Neuron> neuronsVec;											// vector of neurons
 	vector< vector<int> > network;										// vector of neurons network connection
+
+	
 	
 	public:
-	Network();															//Constructor
+	Network();
 	void connect();														// connections of neurons
-	void updateALL(int, int);											// updates all neurons and gives spikes to target neurons
+	void updateALL(int, int);													// updates all neurons
 	
 };
 
