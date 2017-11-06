@@ -11,10 +11,12 @@ and Inhibitory Spiking Neurons*
                                       -Connections generated randomly
                                       
 Classes:
-  Neuron.hpp : neuron modelization with
+
+Neuron.hpp : neuron modelization with
                                           - external current input "Iext"
                                           - membrane potential V
-                                          - 
+                                          
+Network.hpp: connection of neurons, network of spike transfer                                      
                                            
 
 
@@ -29,6 +31,7 @@ To run the simulation:
   5) Enter the following command in the terminal: ./neuron
 
 To visualize spikes plot:
+
   1) Go to https://try.jupyter.org/
   2) Upload the "Membrane.txt" located in: cppcourse-brunel/W3Project/build
   3) On the top right menu select "New/Python 3"
@@ -47,4 +50,18 @@ To visualize spikes plot:
                 *************************** RESULTS **********************************    
                 Graphical representation of neuron number as a function of spike times
                 **********************************************************************
+                
+                
+                
+To run googleTests:
+
+  1) Go to the directory where the build folder is : ~/whereyoudownloadedtherep/CS116-2017-milad-dulloo-/W3Project/build$
+  2) Enter the following command line on the terminal: ./UNITTEST
+ 
+                
+                
+                
+                
+                
+                
   
