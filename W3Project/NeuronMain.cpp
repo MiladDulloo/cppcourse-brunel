@@ -6,6 +6,14 @@
 #include <fstream>
 using namespace std;
 
+/*! \brief NeuronMain
+ *         
+ *
+ *  Simulation will run from here
+ * 	during the time enterval specified by t_start
+ * 	and t_stop, here delta time = 1000ms
+ */
+
 int main()
 {
 //Simulation Time Interval

@@ -7,9 +7,23 @@
 #include <fstream>
 using namespace std;
 
-
+/*! \brief Network
+ * 
+ *         
+ *	This class consists of 2500 inhibitory neurons and
+ * 	10'000 excitatory neurons. They will connect toghether randomly
+ * 	on the network vector.
+ * 	The connect() method will randomly connect the neurons of the
+ * 	network.
+ * 	Each neuron will be checked for spike status by the Neurupdate()
+ * 	function. The updateALL() function will determine each spiking 
+ * 	neuron's target connection in order to transfer the spike to it.
+ * 	Then updateALL() will open a .txt file in which the neuron indices 
+ * 	and their corresponding spike time will be printed on.
+ * 	All this is done while the simulation is running.
+ *  
+ */
 											
-
 	Network::Network():													// Constructor initialization list									
 	N_E(10000), N_I(2500), C_E(1000), C_I(250),		
 	Jex(0.1), Jin(-0.5)

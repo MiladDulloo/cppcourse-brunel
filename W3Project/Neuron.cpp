@@ -8,7 +8,18 @@
 #include <random>
 using namespace std;
 
-
+/*! \brief Neuron.
+ *         
+ *	This file models a neuron, with all parameters initialized in
+ * 	the Neuron() constructor.
+ * 	The Neurupdate() method will, for a specified time step, verify if
+ * 	a its membrane potential has reached the threshold to spike.
+ * 	The spike time is stored in a buffer ring, the membrane potential depolarized during
+ * 	a refractory period and then the check goes back on.
+ * 	Neurupdate() indicates spike state of the neuron.
+ * 	The neuron is also able to recieve a spike with specified amplitude
+ * 	and reception time which will be stored in its buffer.
+ */
 
 Neuron::Neuron():														// Constructor initialization list
 Iext(0.0), V(0.0), spike_t(0.0), spike_num(0.0), local_t(0.0), g(5),
